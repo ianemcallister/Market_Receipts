@@ -9,6 +9,8 @@ var app = express();
 //environment variables
 var port = process.env.PORT || 3000;
 
+console.log(process.env);
+
 //get the URL encoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var jsonParser = bodyParser.json();
