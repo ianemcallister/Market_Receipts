@@ -20,6 +20,7 @@ gulp.task('dist', [
 gulp.task('scripts', function() {
 	gulp.src([
 		'node_modules/angular/angular.js',
+		'node_modules/angular-route/angular-route.js',
 		'public/**/*.js'
 		])
 		.pipe(concat('app.js'))
@@ -29,6 +30,7 @@ gulp.task('scripts', function() {
 gulp.task('scripts-dist', function() {
 	gulp.src([
 		'node_modules/angular/angular.js',
+		'node_modules/angular-route/angular-route.js',
 		'public/**/*.js'
 		])
 		.pipe(sourcemaps.init())
@@ -42,6 +44,8 @@ gulp.task('scripts-dist', function() {
 gulp.task('copy-html', function() {
 	gulp.src('./public/index.html')
 		.pipe(gulp.dest('./dist'));
+	gulp.src('./public/views/**/*.htm')
+		.pipe(gulp.dest('./dist/views'));
 	gulp.src('./public/js/**/*.htm')
 		.pipe(gulp.dest('./dist/views'));
 });

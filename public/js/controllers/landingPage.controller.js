@@ -1,13 +1,10 @@
-// MODULE
-var marketForm = angular.module('marketForm', ['ngRoute']);
+marketForm.controller('landingPageController', ['$scope', 'suggestions', 'validations', function ($scope, suggestions, validations) {
 
-// CONTROLLERS
-/* @ngInject */
-marketForm.controller('mainController', ['$scope', 'marketValues', function ($scope, marketValues) {
+	console.log('in the landing controller');
 
-	//view variables
-	$scope.allData = marketValues.returnAllValues();
-	$scope.validations = marketValues.returnAllValidations();
+		//view variables
+	$scope.allData = suggestions;
+	$scope.validations = validations;
     $scope.submitNow = false;
     $scope.submitBtn = {
         classes: {
@@ -106,8 +103,4 @@ marketForm.controller('mainController', ['$scope', 'marketValues', function ($sc
         }
 
     }
-
 }]);
-
-
-

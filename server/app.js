@@ -23,12 +23,12 @@ app.use(urlencodedParser); // for parsing application/x-www-form-urlencoded
 //app.use('/assets', express.static(__dirname + '/public'));
 
 //my own middleware
-/*app.use('/', function(req, res, next) {
+app.use('/', function(req, res, next) {
 	//log the url to the console
 	console.log('Request Url: ' + req.url);
 
 	next();
-});*/
+});
 
 //handle HTTP requests, for GET calls
 /*app.get('/db/form/:name/:status', function(req, res) {
