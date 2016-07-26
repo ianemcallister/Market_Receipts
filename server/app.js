@@ -10,7 +10,10 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 console.log(process.env);
-
+console.log('process.env.MAIL_HOST', process.env.MAIL_HOST);
+console.log('process.env.MAIL_PORT', process.env.MAIL_PORT);
+console.log('process.env.MAIL_USER', process.env.MAIL_USER);
+console.log('process.env.MAIL_PASSWORD', process.env.MAIL_PASSWORD);
 //get the URL encoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var jsonParser = bodyParser.json();
