@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var path = require('path');
 //var api = require('./api/api');
 
 //return the express object
@@ -23,12 +24,12 @@ app.use(urlencodedParser); // for parsing application/x-www-form-urlencoded
 //app.use('/assets', express.static(__dirname + '/public'));
 
 //my own middleware
-app.use('/', function(req, res, next) {
+/*app.get('/api/testing', function(req, res, next) {
 	//log the url to the console
 	console.log('Request Url: ' + req.url);
 
 	next();
-});
+});*/
 
 //handle HTTP requests, for GET calls
 /*app.get('/db/form/:name/:status', function(req, res) {
@@ -95,7 +96,21 @@ app.get('/assets/:name', function(req, res) {
 	console.log(path, filename);
 	res.send({'testing':'test', "path":path, "filename":filename});
 });*/
-/*app.get('/', function(req, res) {
+app.get('/api/getData/:location/:date', function(req, res) {
+	console.log('Request Url: ' + req.url, req.params);
+	
+	var options = {
+		root: __dirname + '/receiptObjects',
+		headers: {
+			'x-timestamp': Date.now(),
+			'x-sent': true
+		}
+	};
+
+	var filename = path.join(req.params.location + req.params.date + '.json');
+	
+	console.log('filename', filename);
+	
 	res.sendFile(filename, options, function(err) {
 		if(err) {
 			console.log(err);
@@ -104,7 +119,8 @@ app.get('/assets/:name', function(req, res) {
 			console.log('sent:', filename);
 		}
 	});
-});*/
+
+});
 
 /*app.get('/api/guessMarket', function(req, res) {
 	

@@ -1,8 +1,12 @@
-marketForm.controller('landingPageController', ['$scope', 'suggestions', 'validations', function ($scope, suggestions, validations) {
+marketForm.controller('landingPageController', ['$scope', '$log', 'suggestions', 'validations', function ($scope, $log, suggestions, validations) {
 
-	console.log('in the landing controller');
+	$log.info('in the landing controller');
 
-		//view variables
+	//view variables
+	/*suggestions.then(function(result) {
+		console.log('got this result', result);
+		//$scope.allData = result; 
+	});*/
 	$scope.allData = suggestions;
 	$scope.validations = validations;
     $scope.submitNow = false;

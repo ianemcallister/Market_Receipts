@@ -2,10 +2,10 @@ angular
     .module('marketForm')
     .factory('marketValues', marketValues);
 
-marketValues.$inject = ['$log'];
+marketValues.$inject = ['$log', '$http'];
 
 /* @ngInject */
-function marketValues($log) {
+function marketValues($log, $http) {
 
 	var allValues = {
 		market: {
@@ -85,13 +85,45 @@ function marketValues($log) {
 	};
 
 	var marketValuesService = {
+		_get:_get,
 		returnAllValues: returnAllValues,
+		returnSuggestions:returnSuggestions,
 		returnAllValidations:returnAllValidations
 	};
+
+	function _get(url) {
+		return new Promise(function(resolve, reject) {
+
+			$http({
+				method: 'GET',
+				url: url
+			}).then(function successCallback(response) {
+				
+				resolve(response.data);
+				
+			}, function errorCallback(error) {
+				reject(error);
+			});
+
+		});
+	}
 
 	function returnAllValues() {
 		return allValues
 	};
+
+	function returnSuggestions(params) {
+		console.log('got these params', params);
+
+		return new Promise(function(resolve, reject) {
+			_get('/api/getData/' + params.location + "/" + params.date).then(function(result) {
+				console.log('result', result);
+				resolve(result);
+			}).catch(function(e) {
+				console.log("error:", e);
+			});
+		})
+	}
 
 	function returnAllValidations() {
 		return {
