@@ -1,4 +1,4 @@
-marketForm.controller('landingPageController', ['$scope', '$log', 'suggestions', 'validations', function ($scope, $log, suggestions, validations) {
+marketForm.controller('landingPageController', ['$scope', '$log', 'suggestions', 'validations', 'marketValues', function ($scope, $log, suggestions, validations, marketValues) {
 
 	$log.info('in the landing controller');
 
@@ -102,6 +102,8 @@ marketForm.controller('landingPageController', ['$scope', '$log', 'suggestions',
             if($scope.submitBtn.classes['btn-success']) {
 
                 console.log('submitting the form', $scope.allData);
+
+                marketValues.submitReceipt($scope.allData);
             }
 
         }

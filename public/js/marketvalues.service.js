@@ -86,6 +86,8 @@ function marketValues($log, $http) {
 
 	var marketValuesService = {
 		_get:_get,
+		_post:_post,
+		submitReceipt:submitReceipt,
 		returnAllValues: returnAllValues,
 		returnSuggestions:returnSuggestions,
 		returnAllValidations:returnAllValidations
@@ -103,6 +105,21 @@ function marketValues($log, $http) {
 				
 			}, function errorCallback(error) {
 				reject(error);
+			});
+
+		});
+	}
+
+	function _post(data) {
+		$log.info('got this in _post', data);
+
+		return new Promise(function(resolve, reject) {
+
+			var result = $http.post('/api/submitForm/marketReceipt', data)
+			.then(function successCallback(response) {
+				resolve('success');
+			}, function errorCallback(response) {
+				resolve('error');
 			});
 
 		});
@@ -135,6 +152,28 @@ function marketValues($log, $http) {
 			pay:  { changed:false, approved:false, changeNotes: '', newValue:''},
 			due:  { changed:false, approved:false, changeNotes: '', newValue:''}
 		}
+	}
+
+	function submitReceipt(data) {
+		var service = this;
+		//notify the user
+		$log.info('got this', data);
+
+		
+		return new Promise(function(resolve, reject) {
+
+			//submit form
+			service._post(data).then(function(response) {
+				//notify the user
+				//console.log('response:', response);
+				//when success is achieved redirect
+				resolve(response);
+			}).catch(function(err) {
+				//console.log('Error:', err);
+				reject(err);
+			});
+
+		});
 	}
 	
 	return marketValuesService;

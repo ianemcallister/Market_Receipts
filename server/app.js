@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-//var api = require('./api/api');
+var api = require('./api');
 
 //return the express object
 var app = express();
@@ -136,19 +136,21 @@ app.get('/api/getData/:location/:date', function(req, res) {
 	res.send(guess);
 })*/
 
-//app.post('/forms/marketReceipt', function(req, res) {
+app.post('/api/submitForm/marketReceipt', function(req, res) {
 	//notify the user
-	/*console.log('got this', req.body);
+	console.log('got this', req.body);
 
 	//process the data
 	api.receiveForm('marketReceipt', req.body)
 	.then(function(response) {
+		console.log('got this response:', response);
 		res.send('Success: ' + response);
 	}).catch(function(err) {
+		console.log('got this error:', err);
 		res.send('Error: ' + err);
 	})
 	
-})*/
+})
 
 //open the port for local development
 app.listen(port,function() {

@@ -14,20 +14,6 @@ function config($routeProvider) {
                         location: $route.current.params.location,
                         date: $route.current.params.date
                     });
-
-                /*return new Promise(function(resolve, reject) {
-                    marketValues.returnSuggestions({
-                        location: $route.current.params.location,
-                        date: $route.current.params.date
-                    }).then(function(result) {
-                        resolve(result);
-                    }).catch(function(e) {
-                        console.log("error:", e);
-                    });
-
-                });*/
-
-                
             },
             validations: function(marketValues) {
                 return marketValues.returnAllValidations();
