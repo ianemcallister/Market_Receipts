@@ -3,27 +3,33 @@
 var nodemailer = require('nodemailer');
 //var mailconfig = require('./mailconfig');
 var environment = process.env.NODE_ENV;
-if(typeof process.env.NODE_ENV == 'undefined') { //undefined means development
-	var AH_NUTS_SECRETS = require('./env.js');
-	var MAIL_HOST = AH_NUTS_SECRETS.MAIL_HOST;
-	var MAIL_PORT = AH_NUTS_SECRETS.MAIL_PORT;
-	var MAIL_USER = AH_NUTS_SECRETS.MAIL_USER;
-	var MAIL_PASSWORD = AH_NUTS_SECRETS.MAIL_PASSWORD;
-	//var FIREBASE_DB = AH_NUTS_SECRETS.FIREBASE_DB;
-} else {							//this is production, pull from the env
-	var MAIL_HOST = process.env.AH_NUTS_MAIL_HOST;
-	var MAIL_PORT = process.env.AH_NUTS_MAIL_PORT;
-	var MAIL_USER = process.env.AH_NUTS_MAIL_USER;
-	var MAIL_PASSWORD = process.env.AH_NUTS_MAIL_PASSWORD;
-}
-
-console.log('environment', environment);
 
 var mailCenter = {
 	sendEmail:sendEmail
 }
 
 function sendEmail(sendTo, sendFrom, subject, body, attch) {
+	
+	if(typeof process.env.NODE_ENV == 'undefined') { //undefined means development
+		var AH_NUTS_SECRETS = require('./env.js');
+		var MAIL_HOST = AH_NUTS_SECRETS.MAIL_HOST;
+		var MAIL_PORT = AH_NUTS_SECRETS.MAIL_PORT;
+		var MAIL_USER = AH_NUTS_SECRETS.MAIL_USER;
+		var MAIL_PASSWORD = AH_NUTS_SECRETS.MAIL_PASSWORD;
+		//var FIREBASE_DB = AH_NUTS_SECRETS.FIREBASE_DB;
+	} else {							//this is production, pull from the env
+		var MAIL_HOST = process.env.AH_NUTS_MAIL_HOST;
+		var MAIL_PORT = process.env.AH_NUTS_MAIL_PORT;
+		var MAIL_USER = process.env.AH_NUTS_MAIL_USER;
+		var MAIL_PASSWORD = process.env.AH_NUTS_MAIL_PASSWORD;
+	}
+
+	console.log('environment', environment);
+	console.log('process.env.MAIL_HOST', process.env.MAIL_HOST);
+	console.log('process.env.MAIL_PORT', process.env.MAIL_PORT);
+	console.log('process.env.MAIL_USER', process.env.MAIL_USER);
+	console.log('process.env.MAIL_PASSWORD', process.env.MAIL_PASSWORD);
+
 	
 	//define the email settings
 	var smtpConfig = {
