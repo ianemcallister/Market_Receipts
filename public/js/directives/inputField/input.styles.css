@@ -1,0 +1,39 @@
+
+
+.receiptTitle {
+	padding-left: 0px; 
+	padding-top: 6px; 
+	padding-bottom: 6px; 
+	padding-right: 5px;
+}
+
+.receiptInput {
+	padding-left: 5px; 
+	padding-top: 6px; 
+	padding-bottom: 6px;
+}
+
+.subnote {
+	font-weight: 400;
+	font-size: .75em;
+}
+
+.linkText {
+	font-weight: 400;
+	font-size: .75em;
+	text-decoration: true;
+	color: blue;
+}
+
+.detailUL {
+	padding-left: 0px;
+}
+
+.detailsList {
+	font-size: .85em;
+}
+
+.formNote {
+	font-size: .85em;
+	color: gray;
+}

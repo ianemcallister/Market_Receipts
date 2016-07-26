@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" ng-app="marketForm">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Market Receipt Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel='stylesheet' href="directives/inputField/input.styles.css">
+        <!--<link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/extra.css">-->
+        
+        <script src="https://code.angularjs.org/1.4.5/angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src='marketvalues.service.js'></script>
+        <script src="directives/inputField/input.directive.js"></script>
+        <script src="directives/marketRow/market.directive.js"></script>
+        <script src="directives/employeeRow/employee.directive.js"></script>
+        <script src="directives/dateRow/date.directive.js"></script>
+        <script src="directives/salesRow/sales.directive.js"></script>
+        <script src="directives/rentRow/rent.directive.js"></script>
+        <script src="directives/payRow/pay.directive.js"></script>
+        <script src="directives/dueRow/due.directive.js"></script>
+        <script src="directives/imageRow/image.directive.js"></script>
+        <script src="directives/submitBtn/submit.directive.js"></script>
+    </head>
+    <body ng-controller="mainController">
+        
+        <form class="container">
+            <div class="row">
+                <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Market Receipt Form</h3>
+                
+                <!--<p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <i>Market Name Here</i>
+                </p>-->                
+            </div>
+
+            <p class='formNote'>*To view details click the row title.</p>
+
+            <div class="row"><market-selection data="allData.market" addressed="validations.market"></market-selection></div>
+            <div class="row"><employee-selection data="allData.employee" addressed="validations.employee"></employee-selection></div>
+            <div class="row"><date-selection data="allData.date" addressed="validations.date"></date-selection></div>
+            <div class="row"><sales data="allData.sales" addressed="validations.sales"></sales></div>
+            <div class="row"><rent data="allData.rent" addressed="validations.rent"></rent></div>
+            <div class="row"><pay data="allData.pay" addressed="validations.pay"></pay></div>
+            <div class="row"><due data="allData.due" addressed="validations.due"></due></div>
+            <!--<div class="row"><image-upload></image-upload></div>-->
+            
+            <p class='formNote'>*Please make sure all due funds are transfeered to Ah-Nuts within 24 hours.</p>
+            
+            <div class="row"><submit-btn state='submitBtn.classes' submit='submitNow'></submit-btn></div>
+            
+        </form>
+
+
+    </body>
+</html>

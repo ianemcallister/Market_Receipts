@@ -1,0 +1,63 @@
+<div>
+		<!--Title-->
+	<label 	for="" 
+			class='col-xs-3 col-sm-3 col-md-3 col-lg-3 receiptTitle'> 
+		<strong ng-click='vm.showDetails=!vm.showDetails'>{{vm.title}}:</strong>
+	</label>
+	
+	<!--Input Field-->
+	<input 	type="text" 
+			placeholder="{{vm.suggestion}}"
+			class='col-xs-7 col-sm-7 col-md-7 col-lg-7 receiptInput'
+			ng-model="vm.tempInputValue"
+			ng-change="vm.validate()">
+
+	<!--Accept/Decline-->
+	<button class='col-xs-2 col-sm-2 col-md-2 col-lg-2 btn'
+			ng-class='vm.validationBtn.classes'
+			ng-click='vm.approve()'>
+				{{vm.validationBtn.text}}
+	</button>
+	
+	<!--Details-->
+	<div 	class='col-xs-12 col-sm-12 col-md-12 col-lg-12' 
+			ng-if='vm.showDetails'>
+		<!--Title-->
+		<label for="">
+			<strong>Details:</strong>
+			<span class="subnote">
+				<i>This is how we got the value above</i>
+			</span>	
+		</label>
+		
+		<!--detail Lines-->
+		<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+			<ul class='detailUL'>
+				<li class='detailsList'
+					ng-repeat='line in vm.details track by $index'>
+					{{line}}
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--Change Notes-->
+	<div 	class='col-xs-12 col-sm-12 col-md-12 col-lg-12' 
+			ng-if='vm.showChangeNotes'>
+		<label for="changeNotes">
+			<strong>Change Notes:</strong>
+			<span class='subnote'>
+				<i>If you want to change the value above, please tell us why.</i>
+			</span>
+			<span class='linkText'>Reset</span>
+		</label>
+		<textarea 	name="changeNotes" 
+					id="changeNotes" 
+					class='col-xs-12 col-sm-12 col-md-12 col-lg-12' 
+					rows="3"
+					ng-model='vm.tempChaneNotesValue'
+					ng-change='vm.saveNotes()'>
+				
+		</textarea>
+	</div>
+</div>
