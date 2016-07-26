@@ -29,7 +29,7 @@ function sendEmail(sendTo, sendFrom, subject, body, attch) {
 	var smtpConfig = {
 		host: MAIL_HOST,
 		port: MAIL_PORT,
-		secure: false, // use SSL
+		secure: true, // use SSL
 		auth: {
 			user: MAIL_USER,
 			pass: MAIL_PASSWORD			
