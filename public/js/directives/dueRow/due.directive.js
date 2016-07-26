@@ -13,7 +13,7 @@ function due () {
 			addressed: '='
 		},
 		controllerAs: 'vm',
-		templateUrl: 'directives/dueRow/due.directive.htm',
+		templateUrl: 'views/directives/dueRow/due.directive.htm',
 		link: function(scope, elem, attrs) {},
 		controller: dueController,
 		bindToController: true

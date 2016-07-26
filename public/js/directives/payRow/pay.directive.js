@@ -13,7 +13,7 @@ function pay () {
 			addressed: '='
 		},
 		controllerAs: 'vm',
-		templateUrl: 'directives/payRow/pay.directive.htm',
+		templateUrl: 'views/directives/payRow/pay.directive.htm',
 		link: function(scope, elem, attrs) {},
 		controller: payController,
 		bindToController: true

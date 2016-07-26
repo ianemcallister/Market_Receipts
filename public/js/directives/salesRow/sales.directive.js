@@ -13,7 +13,7 @@ function sales () {
 			addressed: '='
 		},
 		controllerAs: 'vm',
-		templateUrl: 'directives/salesRow/sales.directive.htm',
+		templateUrl: 'views/directives/salesRow/sales.directive.htm',
 		link: function(scope, elem, attrs) {},
 		controller: salesController,
 		bindToController: true

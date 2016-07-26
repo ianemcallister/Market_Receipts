@@ -1,0 +1,41 @@
+{
+  "name": "market-receipts",
+  "version": "1.0.0",
+  "description": "Ah-Nuts Service",
+  "main": "server/app.js",
+  "scripts": {
+    "start":"node server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianemcallister/Market_Receipts.git"
+  },
+  "author": "Ian McAllister",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianemcallister/Market_Receipts/issues"
+  },
+  "homepage": "https://github.com/ianemcallister/Market_Receipts#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "npm-angular-route": "^1.3.0-build.2880"
+  },
+  "devDependencies": {
+    "eslint": "^3.1.1",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-plugin-angular": "^1.3.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4"
+  }
+}

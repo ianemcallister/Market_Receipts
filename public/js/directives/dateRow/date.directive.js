@@ -13,7 +13,7 @@ function dateSelection () {
 			addressed: '='
 		},
 		controllerAs: 'vm',
-		templateUrl: 'directives/dateRow/date.directive.htm',
+		templateUrl: 'views/directives/dateRow/date.directive.htm',
 		link: function(scope, elem, attrs) {},
 		controller: dateSelectionController,
 		bindToController: true

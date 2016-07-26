@@ -14,7 +14,7 @@ function inputField () {
 			details: '=',
 			addressed: '='
 		},
-		templateUrl: 'directives/inputField/input.directive.htm',
+		templateUrl: 'views/directives/inputField/input.directive.htm',
 		link: function(scope, elem, attrs) {},
 		controllerAs: 'vm',
 		controller: inputFieldController,

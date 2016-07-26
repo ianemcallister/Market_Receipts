@@ -13,7 +13,7 @@ function employeeSelection () {
 			addressed: '='
 		},
 		controllerAs: 'vm',
-		templateUrl: 'directives/employeeRow/employee.directive.htm',
+		templateUrl: 'views/directives/employeeRow/employee.directive.htm',
 		link: function(scope, elem, attrs) {},
 		controller: employeeSelectionController,
 		bindToController: true

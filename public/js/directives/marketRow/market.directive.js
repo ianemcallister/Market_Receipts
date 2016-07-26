@@ -13,7 +13,7 @@ function marketSelection () {
 			addressed: '='
 		},
 		controllerAs: 'vm',
-		templateUrl: 'directives/marketRow/market.directive.htm',
+		templateUrl: 'views/directives/marketRow/market.directive.htm',
 		link: function(scope, elem, attrs) {},
 		controller: marketSelectionController,
 		bindToController: true

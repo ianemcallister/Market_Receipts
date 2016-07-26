@@ -13,7 +13,7 @@ function rent () {
 			addressed: '='
 		},
 		controllerAs: 'vm',
-		templateUrl: 'directives/rentRow/rent.directive.htm',
+		templateUrl: 'views/directives/rentRow/rent.directive.htm',
 		link: function(scope, elem, attrs) {},
 		controller: rentController,
 		bindToController: true

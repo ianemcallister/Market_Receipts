@@ -13,7 +13,7 @@ function submitBtn () {
 			submit: '='
 		},
 		controllerAs: 'vm',
-		templateUrl: 'directives/submitBtn/submitBtn.directive.htm',
+		templateUrl: 'views/directives/submitBtn/submitBtn.directive.htm',
 		link: function(scope, elem, attrs) {
 		},
 		controller: submitBtnController,
