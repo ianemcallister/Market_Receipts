@@ -1,4 +1,4 @@
-marketForm.controller('landingPageController', ['$scope', '$log', 'suggestions', 'validations', 'marketValues', function ($scope, $log, suggestions, validations, marketValues) {
+marketForm.controller('landingPageController', ['$scope', '$log', '$location', 'suggestions', 'validations', 'marketValues', function ($scope, $log, $location, suggestions, validations, marketValues) {
 
 	$log.info('in the landing controller');
 
@@ -103,7 +103,17 @@ marketForm.controller('landingPageController', ['$scope', '$log', 'suggestions',
 
                 console.log('submitting the form', $scope.allData);
 
-                marketValues.submitReceipt($scope.allData);
+                marketValues.submitReceipt($scope.allData).then(function(response) {
+
+                    //notify user of success
+                    console.log('got this response:', response);
+
+                    //on success, redirect to confirmation page
+                    $location.path("/form_submission/success");
+                    $scope.$apply();
+                }).catch(function(error) {
+                    console.log('got this error:', error);
+                });
             }
 
         }

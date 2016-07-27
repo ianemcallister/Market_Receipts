@@ -154,7 +154,7 @@ app.post('/api/submitForm/marketReceipt', function(req, res) {
 	}).catch(function(err) {
 		console.log('got this error:', err);
 		res.send('Error: ' + err);
-	})
+	});
 	
 })
 

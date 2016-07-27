@@ -117,8 +117,10 @@ function marketValues($log, $http) {
 
 			var result = $http.post('/api/submitForm/marketReceipt', data)
 			.then(function successCallback(response) {
+				console.log('got this response', response);
 				resolve('success');
-			}, function errorCallback(response) {
+			}, function errorCallback(error) {
+				console.log('got this error', error);
 				resolve('error');
 			});
 
@@ -148,8 +150,10 @@ function marketValues($log, $http) {
 			employee:  { changed:false, approved:false, changeNotes: '', newValue:''},
 			date:  { changed:false, approved:false, changeNotes: '', newValue:''},
 			sales:  { changed:false, approved:false, changeNotes: '', newValue:''},
+			till:  { changed:false, approved:false, changeNotes: '', newValue:''},
 			rent:  { changed:false, approved:false, changeNotes: '', newValue:''},
 			pay:  { changed:false, approved:false, changeNotes: '', newValue:''},
+			bank:  { changed:false, approved:false, changeNotes: '', newValue:''},
 			due:  { changed:false, approved:false, changeNotes: '', newValue:''}
 		}
 	}

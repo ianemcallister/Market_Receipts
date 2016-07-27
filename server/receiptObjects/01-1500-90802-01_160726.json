@@ -24,53 +24,73 @@
 		"approvedValue": "",
 		"changed": false,
 		"changeNotes": "",
-		"suggestion": "$307.00",
+		"suggestion": "$407.00",
 		"details": [
-			"Gross Sales:",
-			"Total Discounts:",
-			"Net Sales:"
+			"Gross Sales: $407.00",
+			"Total Discounts: -$0.00",
+			"Net Sales: $407.00"
+		]
+	},
+	"till": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$341.00",
+		"details": [
+			"Based on your sales, this is how much cash should be left in your drawer.",
+			"This number includes your starting bank of $60.00."
 		]
 	},
 	"rent": {
 		"approvedValue": "",
 		"changed": false,
 		"changeNotes": "",
-		"suggestion": "$33.00",
+		"suggestion": "$43.00",
 		"details": [
-		"Gross Sales: $307.00",
+		"Gross Sales: $407.00",
 		"Market Percentage: 10%",
-		"Percentage Fee: $31.00",
+		"Percentage Fee: $41.00",
 		"Flat Fee: $2.00",
-		"Total Market Rent: $33.00"
+		"Total Market Rent: $43.00"
 		]
 	},
 	"pay": {
 		"approvedValue": "",
 		"changed": false,
 		"changeNotes": "",
-		"suggestion": "$62.00", 
+		"suggestion": "$82.00", 
 		"details": [
 			"Total Market Hours (3:00 PM - 8:00 PM): 5 hrs",
 			"Hourly Guaranteed Rate: $10/hr",
 			"Hourly Guaranteed Subtotal: $50.00",
 			"Commission Rate: 20%",
-			"Commission Subtotal: $62.00",
-			"Commission ($62.00) > Hourly ($40.00)",
+			"Commission Subtotal: $82.00",
+			"Commission ($82.00) > Hourly ($50.00)",
 			"Pay From Guarantee: $50.00",
-			"Pay From Commission: $12.00",
-			"Total Pay: $62.00"
+			"Pay From Commission: $32.00",
+			"Total Pay: $82.00"
+		]
+	},
+	"bank": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$60.00",
+		"details": [
+			"You should have started the market with $60.00 of bank."
 		]
 	},
 	"due": {
 		"approvedValue": "",
 		"changed": false,
 		"changeNotes": "",
-		"suggestion": "$307.00",
+		"suggestion": "$156.00",
 		"details": [
-			"Net Sales: $307.00",
-			"Market Fee: -$33.00",
-			"Employee Pay: -$62.00",
-			"Total Due To Ah-Nuts: $212.00"
+			"Final Till Cash: $341.00",
+			"Market Fee: -$43.00",
+			"Employee Pay: -$82.00",
+			"Starting Bank: -$60.00",
+			"Total Due To Ah-Nuts: $156.00"
 		]
 	}
 }

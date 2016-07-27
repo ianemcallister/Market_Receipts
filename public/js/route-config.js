@@ -4,7 +4,7 @@ angular
 /* @ngInject */
 function config($routeProvider) {   
     $routeProvider
-    .when('/:location/:date', {
+    .when('/receipt/:location/:date', {
         templateUrl: 'views/landingPage.htm',
         controller: 'landingPageController',
         controllerAs: 'vm',
@@ -19,6 +19,11 @@ function config($routeProvider) {
                 return marketValues.returnAllValidations();
             }
         }
+    })
+    .when('/form_submission/success', {
+        templateUrl: 'views/formSuccessPage.htm',
+        controller: 'formSuccessController',
+        controllerAs: 'vm',        
     })
     .otherwise({
         redirectTo: '/'
