@@ -113,7 +113,7 @@ app.get('/api/getData/:location/:date', function(req, res) {
 		}
 	};
 
-	var filename = path.join(req.params.location + req.params.date + '.json');
+	var filename = path.join(req.params.location + "_" + req.params.date + '.json');
 	
 	console.log('filename', filename);
 	

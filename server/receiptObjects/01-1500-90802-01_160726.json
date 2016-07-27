@@ -1,0 +1,76 @@
+{
+	"market": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "Bixby Park - Tuesday",
+		"details": ["This report was prepared specifically for this market."]
+	},
+	"employee": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "Kevin Luna",
+		"details": ["Kevin was scheduled to work this market."]
+	},
+	"date": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "7/26/16",
+		"details": ["This report was generated on 7/26/16 for this market on 7/26/16."]
+	},
+	"sales": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$307.00",
+		"details": [
+			"Gross Sales:",
+			"Total Discounts:",
+			"Net Sales:"
+		]
+	},
+	"rent": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$33.00",
+		"details": [
+		"Gross Sales: $307.00",
+		"Market Percentage: 10%",
+		"Percentage Fee: $31.00",
+		"Flat Fee: $2.00",
+		"Total Market Rent: $33.00"
+		]
+	},
+	"pay": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$62.00", 
+		"details": [
+			"Total Market Hours (3:00 PM - 8:00 PM): 5 hrs",
+			"Hourly Guaranteed Rate: $10/hr",
+			"Hourly Guaranteed Subtotal: $50.00",
+			"Commission Rate: 20%",
+			"Commission Subtotal: $62.00",
+			"Commission ($62.00) > Hourly ($40.00)",
+			"Pay From Guarantee: $50.00",
+			"Pay From Commission: $12.00",
+			"Total Pay: $62.00"
+		]
+	},
+	"due": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$307.00",
+		"details": [
+			"Net Sales: $307.00",
+			"Market Fee: -$33.00",
+			"Employee Pay: -$62.00",
+			"Total Due To Ah-Nuts: $212.00"
+		]
+	}
+}
