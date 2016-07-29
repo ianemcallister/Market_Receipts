@@ -1,0 +1,97 @@
+{
+	"market": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "Anaheim Promenade",
+		"details": ["This report was prepared specifically for this market."]
+	},
+	"employee": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "CJ Adams",
+		"details": ["CJ was scheduled to work this market."]
+	},
+	"date": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "7/28/16",
+		"details": ["This report was generated on 7/28/16 for this market on 7/28/16."]
+	},
+	"sales": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$251.00",
+		"details": [
+			"Gross Sales: $251.00",
+			"Total Discounts: -$2.00",
+			"Total Refunds: -$0.00",
+			"Net Sales: $251.00"
+		]
+	},
+	"till": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$178.00",
+		"details": [
+			"Based on your sales, this is how much cash should be left in your drawer.",
+			"This number includes your starting bank of $60.00."
+		]
+	},
+	"rent": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$18.00",
+		"details": [
+		"Gross Sales: $251.00",
+		"Market Percentage: 7%",
+		"Percentage Fee: $18.00",
+		"Flat Fee: $0.00",
+		"Total Market Rent: $18.00"
+		]
+	},
+	"pay": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$50.00", 
+		"details": [
+			"Total Market Hours (11:00 PM - 4:00 PM): 5 hrs",
+			"Hourly Guaranteed Rate: $10/hr",
+			"Hourly Guaranteed Subtotal: $50.00",
+			"Commission Rate: 20%",
+			"Commission Subtotal: $50.00",
+			"Hourly ($50.00) = Commission ($50.00)",
+			"Pay From Guarantee: $50.00",
+			"Pay From Commission: $0.00",
+			"Total Pay: $50.00"
+		]
+	},
+	"bank": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$60.00",
+		"details": [
+			"You should have started the market with $60.00 of bank."
+		]
+	},
+	"due": {
+		"approvedValue": "",
+		"changed": false,
+		"changeNotes": "",
+		"suggestion": "$50.00",
+		"details": [
+			"Final Till Cash: $178.00",
+			"Market Fee: -$18.00",
+			"Employee Pay: -$50.00",
+			"Starting Bank: -$60.00",
+			"Total Due To Ah-Nuts: $50.00"
+		]
+	}
+}
